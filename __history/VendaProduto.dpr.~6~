@@ -1,0 +1,14 @@
+program VendaProduto;
+
+
+
+uses
+  Vcl.Forms,
+  frmPrincipal in 'View\frmPrincipal.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+end.

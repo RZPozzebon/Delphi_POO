@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/23 19:23:37.000.257,=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:07:24.492,=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:07:58.193,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.pas=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:07:58.193,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.dfm=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/10/12 15:08:21.553,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/10/12 15:13:32.832,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:13:47.318,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Model\ClasseCliente.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:17:01.516,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Venda_Produto.dproj=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
