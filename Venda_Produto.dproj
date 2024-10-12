@@ -124,10 +124,15 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="View\frmPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>FormPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Model\ClasseCliente.pas"/>
+        <DCCReference Include="Controller\ClienteController.pas"/>
+        <DCCReference Include="View\Cliente\frmCliente.pas">
+            <Form>frmCadastroCliente</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
