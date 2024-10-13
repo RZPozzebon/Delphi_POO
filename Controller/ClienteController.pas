@@ -3,7 +3,7 @@ unit ClienteController;
 interface
 
 uses
-  ClasseCliente,System.SysUtils,DAOCliente, Vcl.Dialogs;
+  ClasseCliente,System.SysUtils,DAOCliente, Vcl.Dialogs,System.RegularExpressions;
 
 type
   TClienteController = class
@@ -18,8 +18,15 @@ implementation
 
 { TClienteController }
 function TClienteController.emailValido(AEmail : String): Boolean;
+const
+  EmailPattern = '^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$';
+var
+  RegEx: TRegEx;
 begin
-  //
+  // Inicializa a expressão regular
+  RegEx := TRegEx.Create(EmailPattern);
+  // Verifica se o e-mail corresponde ao padrão
+  Result := RegEx.IsMatch(AEmail);
 end;
 
 procedure TClienteController.Salvar(AModeloCliente: TClasseCliente);
@@ -30,7 +37,7 @@ begin
   try
     try
       if (validarDadosCliente(AModeloCliente)) then
-        DAOCliente.salvar(AModeloCliente);
+         DAOCliente.salvar(AModeloCliente);
 
       ShowMessage('Cliente cadastrado com sucesso.');
     except
@@ -57,18 +64,17 @@ begin
     result := false;
     raise Exception.Create('Sexo obrigatório **');
   end;
-
-  // Validar e-mail
-  if(ModeloCliente.FContatoCliente = '') then
+  if (DateToStr(ModeloCliente.FDataAniversario) = '') then
   begin
     result := false;
-    raise Exception.Create('E-mail obrigatório **');
+    raise Exception.Create('Data obrigatória **');
   end;
-//  if not(emailValido(ModeloCliente.FContatoCliente)) then
-//  begin
-//    result := false;
-//    raise Exception.Create('Favor preencher um e-mail válido.');
-//  end;
+  // Validar e-mail
+  if not(emailValido(ModeloCliente.FContatoCliente)) then
+  begin
+    result := false;
+    raise Exception.Create('E-mail inválido.');
+  end;
   // Fim Validação e-mail
 end;
 

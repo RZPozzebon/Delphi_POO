@@ -21,11 +21,15 @@ type
     btnSalvarCliente: TButton;
     btnCancelarCliente: TButton;
     lblNomeObrigatorio: TLabel;
-    lblEmailObrigatorio: TLabel;
+    LblSexoObrigatorio: TLabel;
+    lblDataObrigatoria: TLabel;
+    lblEmailInvalido: TLabel;
     procedure btnSalvarClienteClick(Sender: TObject);
     procedure rgSexoClienteClick(Sender: TObject);
   private
     Sexo: Char;
+    procedure habilitaMensagemErro(AMensagem : String);
+    function PalavraExiste(const Mensagem, Palavra: string): Boolean;
   public
     { Public declarations }
   end;
@@ -56,13 +60,39 @@ begin
     except
       on e : Exception do
       begin
-        raise Exception.Create('Falha ao cadastar cliente. Erro:' + E.Message);
+        habilitaMensagemErro(e.Message);
+        //raise Exception.Create('Falha ao cadastar cliente. Erro:' + E.Message);
       end;
     end;
   finally
     FreeAndNil(cliente);
     FreeAndNil(clienteController);
   end;
+end;
+
+procedure TfrmCadastroCliente.habilitaMensagemErro(AMensagem: String);
+begin
+  //
+  try
+    if PalavraExiste(AMensagem, 'Nome') then
+      lblNomeObrigatorio.Visible := true;
+    if PalavraExiste(AMensagem, 'Sexo') then
+      LblSexoObrigatorio.Visible := true;
+    if PalavraExiste(AMensagem, 'Data') then
+      lblDataObrigatoria.Visible := true;
+    if PalavraExiste(AMensagem, 'E-mail') then
+      lblEmailInvalido.Visible := true;
+
+
+  finally
+
+  end;
+end;
+
+function TfrmCadastroCliente.PalavraExiste(const Mensagem,
+  Palavra: string): Boolean;
+begin
+  Result := Pos(Palavra, Mensagem) > 0;
 end;
 
 procedure TfrmCadastroCliente.rgSexoClienteClick(Sender: TObject);

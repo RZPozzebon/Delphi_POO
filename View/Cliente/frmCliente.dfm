@@ -37,8 +37,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 622
-    ExplicitHeight = 392
+    ExplicitTop = 47
     object lblContatoemail: TLabel
       Left = 112
       Top = 105
@@ -70,9 +69,9 @@ object frmCadastroCliente: TfrmCadastroCliente
     object lblNomeObrigatorio: TLabel
       Left = 249
       Top = 32
-      Width = 108
+      Width = 92
       Height = 15
-      Caption = 'nome Obrigatorio **'
+      Caption = 'E-mail inv'#225'lido **'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -12
@@ -81,12 +80,40 @@ object frmCadastroCliente: TfrmCadastroCliente
       ParentFont = False
       Visible = False
     end
-    object lblEmailObrigatorio: TLabel
-      Left = 248
-      Top = 80
-      Width = 111
+    object LblSexoObrigatorio: TLabel
+      Left = 249
+      Top = 130
+      Width = 102
       Height = 15
-      Caption = 'e-mail Obrigatorio **'
+      Caption = 'Sexo Obrigatorio **'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      Visible = False
+    end
+    object lblDataObrigatoria: TLabel
+      Left = 249
+      Top = 186
+      Width = 100
+      Height = 15
+      Caption = 'Data Obrigatoria **'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clRed
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      Visible = False
+    end
+    object lblEmailInvalido: TLabel
+      Left = 249
+      Top = 79
+      Width = 92
+      Height = 15
+      Caption = 'E-mail inv'#225'lido **'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clRed
       Font.Height = -12

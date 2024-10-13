@@ -21,14 +21,12 @@ object FormPrincipal: TFormPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitLeft = 168
-    ExplicitTop = 64
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitWidth = 622
+    ExplicitHeight = 433
   end
   object MainMenuPrincipal: TMainMenu
-    Left = 80
-    Top = 56
+    Left = 568
+    Top = 8
     object Cadastro1: TMenuItem
       Caption = 'Cadastro'
       object Cliente1: TMenuItem
