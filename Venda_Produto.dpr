@@ -5,7 +5,8 @@ uses
   frmPrincipal in 'View\frmPrincipal.pas' {FormPrincipal},
   ClasseCliente in 'Model\ClasseCliente.pas',
   ClienteController in 'Controller\ClienteController.pas',
-  frmCliente in 'View\Cliente\frmCliente.pas' {frmCadastroCliente};
+  frmCliente in 'View\Cliente\frmCliente.pas' {frmCadastroCliente},
+  DAOCliente in 'DAO\DAOCliente.pas';
 
 {$R *.res}
 

@@ -2,21 +2,23 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2023/11/23 19:23:37.000.257,=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:07:24.492,=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:07:58.193,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.pas=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:07:58.193,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.dfm=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2024/10/12 15:08:21.553,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2024/10/12 15:13:32.832,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:13:47.318,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Model\ClasseCliente.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:17:01.516,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Venda_Produto.dproj=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj</Transaction>
-    <Transaction>2024/10/12 15:32:47.661,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:33:00.218,D:\Projetos_Estudos\Delphi\pjr_produto_venda\ClienteController.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:34:40.391,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:34:48.612,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:35:41.446,D:\Projetos_Estudos\Delphi\pjr_produto_venda\ClienteController.pas=</Transaction>
-    <Transaction>2024/10/12 15:35:59.191,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\ClienteController.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\Unit1.pas</Transaction>
-    <Transaction>2024/10/12 15:43:17.501,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.pas</Transaction>
-    <Transaction>2024/10/12 15:43:48.957,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\Cliente\frmCliente.dfm=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.dfm</Transaction>
-    <Transaction>2024/10/12 15:43:48.957,D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\Cliente\frmCliente.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.pas</Transaction>
+    <Transaction>2024/10/12 15:07:24.000.492,=C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:07:58.000.193,C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.pas</Transaction>
+    <Transaction>2024/10/12 15:07:58.000.193,C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\frmPrincipal.dfm</Transaction>
+    <Transaction>2024/10/12 15:08:21.000.553,C:\Users\rodri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj</Transaction>
+    <Transaction>2024/10/12 15:13:32.000.832,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:13:47.000.318,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Model\ClasseCliente.pas</Transaction>
+    <Transaction>2024/10/12 15:17:01.000.516,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Project1.dproj=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Venda_Produto.dproj</Transaction>
+    <Transaction>2024/10/12 15:32:47.000.661,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:33:00.000.218,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\ClienteController.pas</Transaction>
+    <Transaction>2024/10/12 15:34:40.000.391,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:34:48.000.612,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\Unit1.pas</Transaction>
+    <Transaction>2024/10/12 15:35:41.000.446,D:\Projetos_Estudos\Delphi\pjr_produto_venda\ClienteController.pas=</Transaction>
+    <Transaction>2024/10/12 15:35:59.000.191,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\Unit1.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Controller\ClienteController.pas</Transaction>
+    <Transaction>2024/10/12 15:43:17.000.501,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.pas</Transaction>
+    <Transaction>2024/10/12 15:43:48.000.957,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\Cliente\frmCliente.pas</Transaction>
+    <Transaction>2024/10/12 15:43:48.000.957,D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit2.dfm=D:\Projetos_Estudos\Delphi\pjr_produto_venda\View\Cliente\frmCliente.dfm</Transaction>
+    <Transaction>2024/10/13 09:34:45.527,=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
+    <Transaction>2024/10/13 09:35:42.378,D:\Projetos_Estudos\Delphi\pjr_produto_venda\DAO\DAOCliente.pas=D:\Projetos_Estudos\Delphi\pjr_produto_venda\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

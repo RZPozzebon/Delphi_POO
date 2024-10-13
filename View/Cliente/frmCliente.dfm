@@ -27,9 +27,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitLeft = 200
-    ExplicitTop = 192
-    ExplicitWidth = 185
+    ExplicitWidth = 622
   end
   object pnlCamposCadastro: TPanel
     Left = 0
@@ -39,7 +37,8 @@ object frmCadastroCliente: TfrmCadastroCliente
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 47
+    ExplicitWidth = 622
+    ExplicitHeight = 392
     object lblContatoemail: TLabel
       Left = 112
       Top = 105
@@ -102,6 +101,7 @@ object frmCadastroCliente: TfrmCadastroCliente
       Width = 267
       Height = 23
       TabOrder = 0
+      Text = 'Rodrigo'
     end
     object edtEmailCliente: TEdit
       Left = 245
@@ -109,6 +109,7 @@ object frmCadastroCliente: TfrmCadastroCliente
       Width = 267
       Height = 23
       TabOrder = 1
+      Text = 'rodrigo@gmail.com'
     end
     object rgSexoCliente: TRadioGroup
       Left = 244

@@ -25,10 +25,7 @@ type
     procedure btnSalvarClienteClick(Sender: TObject);
     procedure rgSexoClienteClick(Sender: TObject);
   private
-    function GetSexo: Char;
-    procedure SetSexo(const Value: Char);
-    { Private declarations }
-    property Sexo: Char read GetSexo write SetSexo;
+    Sexo: Char;
   public
     { Public declarations }
   end;
@@ -46,6 +43,7 @@ var
   clienteController : TClienteController;
 begin
   cliente := TClasseCliente.Create();
+  clienteController := TClienteController.Create();
   try
     try
       cliente.FNome := edtNomeCliente.Text;
@@ -53,23 +51,18 @@ begin
       cliente.FSexo := Sexo;
       cliente.FDataAniversario := dtpDataNascimento.Date;
 
-      // Controller validar os dados.
-      clienteController.Create(cliente);
-      
+      // Chama minha camada CONTROLLER
+      clienteController.Salvar(Cliente);
     except
       on e : Exception do
       begin
-        raise Exception.Create('Falha ao cadastar o cliente. Erro:' + E.Message);
+        raise Exception.Create('Falha ao cadastar cliente. Erro:' + E.Message);
       end;
     end;
   finally
-    cliente.Free;
+    FreeAndNil(cliente);
+    FreeAndNil(clienteController);
   end;
-end;
-
-function TfrmCadastroCliente.GetSexo: Char;
-begin
-  Result := Sexo;
 end;
 
 procedure TfrmCadastroCliente.rgSexoClienteClick(Sender: TObject);
@@ -80,11 +73,11 @@ begin
    begin 
      case rgSexoCliente.ItemIndex of
 
-     1: SetSexo('M');// Mulher
+     0: Sexo := 'M';// Mulher
 
-     2: SetSexo('H');// Homen
+     1: Sexo := 'H';// Homen
 
-     3: SetSexo('O');// Outros
+     2: Sexo := 'O';// Outros
      end;
    end;
  except
@@ -93,13 +86,5 @@ begin
      showMessage('Erro ou converter o sexo. Erro: ' + e.Message);
    end;
  end;
-
 end;
-
-procedure TfrmCadastroCliente.SetSexo(const Value: Char);
-begin
-  if Value <> '' then  
-    Sexo := Value;
-end;
-
 end.
