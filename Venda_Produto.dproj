@@ -134,6 +134,10 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="DAO\DAOCliente.pas"/>
+        <DCCReference Include="View\Produto\frmProduto.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

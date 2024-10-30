@@ -6,7 +6,8 @@ uses
   ClasseCliente in 'Model\ClasseCliente.pas',
   ClienteController in 'Controller\ClienteController.pas',
   frmCliente in 'View\Cliente\frmCliente.pas' {frmCadastroCliente},
-  DAOCliente in 'DAO\DAOCliente.pas';
+  DAOCliente in 'DAO\DAOCliente.pas',
+  frmProduto in 'View\Produto\frmProduto.pas' {Form1};
 
 {$R *.res}
 
@@ -15,5 +16,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TFormPrincipal, FormPrincipal);
   Application.CreateForm(TfrmCadastroCliente, frmCadastroCliente);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.

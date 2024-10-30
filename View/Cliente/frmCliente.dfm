@@ -27,7 +27,6 @@ object frmCadastroCliente: TfrmCadastroCliente
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    ExplicitWidth = 622
   end
   object pnlCamposCadastro: TPanel
     Left = 0
@@ -37,7 +36,6 @@ object frmCadastroCliente: TfrmCadastroCliente
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitTop = 47
     object lblContatoemail: TLabel
       Left = 112
       Top = 105
@@ -122,6 +120,13 @@ object frmCadastroCliente: TfrmCadastroCliente
       ParentFont = False
       Visible = False
     end
+    object lblTipoCliente: TLabel
+      Left = 112
+      Top = 251
+      Width = 79
+      Height = 15
+      Caption = 'Tipo de Cliente'
+    end
     object edtNomeCliente: TEdit
       Left = 244
       Top = 48
@@ -153,7 +158,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     end
     object dtpDataNascimento: TDateTimePicker
       Left = 244
-      Top = 204
+      Top = 203
       Width = 267
       Height = 23
       Date = 45577.000000000000000000
@@ -162,7 +167,7 @@ object frmCadastroCliente: TfrmCadastroCliente
     end
     object btnSalvarCliente: TButton
       Left = 198
-      Top = 263
+      Top = 311
       Width = 75
       Height = 25
       Caption = 'salvar'
@@ -171,11 +176,21 @@ object frmCadastroCliente: TfrmCadastroCliente
     end
     object btnCancelarCliente: TButton
       Left = 350
-      Top = 263
+      Top = 311
       Width = 75
       Height = 25
       Caption = 'Cancelar'
       TabOrder = 5
+    end
+    object cbxTipoCliente: TComboBox
+      Left = 244
+      Top = 243
+      Width = 268
+      Height = 23
+      TabOrder = 6
+      Items.Strings = (
+        'Fisica'
+        'Juridica')
     end
   end
 end

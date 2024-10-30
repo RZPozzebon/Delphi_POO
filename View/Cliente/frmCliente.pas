@@ -3,9 +3,12 @@ unit frmCliente;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.StrUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ComCtrls,ClasseCliente,
   ClienteController;
+
+type
+  TTipoCliente = (Fisica, Juridica);
 
 type
   TfrmCadastroCliente = class(TForm)
@@ -24,12 +27,15 @@ type
     LblSexoObrigatorio: TLabel;
     lblDataObrigatoria: TLabel;
     lblEmailInvalido: TLabel;
+    lblTipoCliente: TLabel;
+    cbxTipoCliente: TComboBox;
     procedure btnSalvarClienteClick(Sender: TObject);
     procedure rgSexoClienteClick(Sender: TObject);
   private
     Sexo: Char;
     procedure habilitaMensagemErro(AMensagem : String);
     function PalavraExiste(const Mensagem, Palavra: string): Boolean;
+    function strToTipoCliente(const str : String) : TTipoCliente;
   public
     { Public declarations }
   end;
@@ -50,10 +56,12 @@ begin
   clienteController := TClienteController.Create();
   try
     try
+
       cliente.FNome := edtNomeCliente.Text;
       cliente.FContatoCliente := edtEmailCliente.Text;
       cliente.FSexo := Sexo;
       cliente.FDataAniversario := dtpDataNascimento.Date;
+      cliente.FTipoPessoa := ifthen(strToTipoCliente(cbxTipoCliente.Text) = TTipoCliente.Fisica, 'F','J');
 
       // Chama minha camada CONTROLLER
       clienteController.Salvar(Cliente);
@@ -82,8 +90,6 @@ begin
       lblDataObrigatoria.Visible := true;
     if PalavraExiste(AMensagem, 'E-mail') then
       lblEmailInvalido.Visible := true;
-
-
   finally
 
   end;
@@ -117,4 +123,12 @@ begin
    end;
  end;
 end;
+function TfrmCadastroCliente.strToTipoCliente(const str: String): TTipoCliente;
+begin
+   if str = 'Fisica' then
+     result := Fisica;
+   if str = 'Juridica' then
+     result := Juridica;
+end;
+
 end.

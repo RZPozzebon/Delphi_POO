@@ -14,6 +14,7 @@ type
       FContatoCliente : String;
       FSexo : Char;
       FDataAniversario : TDate;
+      FTipoPessoa : string;
   End;
 
 implementation
