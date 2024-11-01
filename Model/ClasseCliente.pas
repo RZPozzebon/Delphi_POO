@@ -3,7 +3,7 @@ unit ClasseCliente;
 interface
 
 type
-  TClasseCliente = Class
+  TCliente = Class
     private
 //      FNome: string;
 //      FContatoCliente : String;

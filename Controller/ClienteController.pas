@@ -11,8 +11,8 @@ type
      // Metodos de validação
      function emailValido(AEmail : String) : Boolean;
     public
-     function validarDadosCliente(ModeloCliente : TClasseCliente) : Boolean;
-     procedure Salvar(AModeloCliente : TClasseCliente);
+     function validarDadosCliente(ModeloCliente : TCliente) : Boolean;
+     procedure Salvar(AModeloCliente : TCliente);
   end;
 implementation
 
@@ -29,7 +29,7 @@ begin
   Result := RegEx.IsMatch(AEmail);
 end;
 
-procedure TClienteController.Salvar(AModeloCliente: TClasseCliente);
+procedure TClienteController.Salvar(AModeloCliente: TCliente);
 var
   DAOCliente : TDAOCliente;
 begin
@@ -51,7 +51,7 @@ begin
   end;
 end;
 
-function TClienteController.validarDadosCliente(ModeloCliente : TClasseCliente): Boolean;
+function TClienteController.validarDadosCliente(ModeloCliente : TCliente): Boolean;
 begin
   result := true;
   if(ModeloCliente.FNome = '') then

@@ -28,7 +28,7 @@ implementation
 
 procedure TFormPrincipal.Cliente1Click(Sender: TObject);
 begin
-  //frmCadastroCliente := frmCadastroCliente.Create(Self);
+  frmCadastroCliente := TfrmCadastroCliente.Create(Self);
   try
      frmCadastroCliente.ShowModal;
   finally

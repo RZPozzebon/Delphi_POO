@@ -21,8 +21,6 @@ object FormPrincipal: TFormPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 622
-    ExplicitHeight = 433
   end
   object MainMenuPrincipal: TMainMenu
     Left = 568

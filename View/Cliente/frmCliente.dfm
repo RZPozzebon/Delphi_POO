@@ -2,7 +2,7 @@ object frmCadastroCliente: TfrmCadastroCliente
   Left = 0
   Top = 0
   Caption = 'Cadatro de Cliente'
-  ClientHeight = 441
+  ClientHeight = 520
   ClientWidth = 624
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -32,10 +32,12 @@ object frmCadastroCliente: TfrmCadastroCliente
     Left = 0
     Top = 41
     Width = 624
-    Height = 400
+    Height = 479
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitTop = 47
+    ExplicitHeight = 400
     object lblContatoemail: TLabel
       Left = 112
       Top = 105
@@ -127,6 +129,20 @@ object frmCadastroCliente: TfrmCadastroCliente
       Height = 15
       Caption = 'Tipo de Cliente'
     end
+    object lblSucesso: TLabel
+      Left = 325
+      Top = 323
+      Width = 110
+      Height = 15
+      Caption = 'Salvo com sucesso!!'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clDarkgreen
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Visible = False
+    end
     object edtNomeCliente: TEdit
       Left = 244
       Top = 48
@@ -166,8 +182,8 @@ object frmCadastroCliente: TfrmCadastroCliente
       TabOrder = 3
     end
     object btnSalvarCliente: TButton
-      Left = 198
-      Top = 311
+      Left = 244
+      Top = 287
       Width = 75
       Height = 25
       Caption = 'salvar'
@@ -175,8 +191,8 @@ object frmCadastroCliente: TfrmCadastroCliente
       OnClick = btnSalvarClienteClick
     end
     object btnCancelarCliente: TButton
-      Left = 350
-      Top = 311
+      Left = 380
+      Top = 287
       Width = 75
       Height = 25
       Caption = 'Cancelar'
@@ -191,6 +207,22 @@ object frmCadastroCliente: TfrmCadastroCliente
       Items.Strings = (
         'Fisica'
         'Juridica')
+    end
+    object Memo1: TMemo
+      Left = 0
+      Top = 344
+      Width = 624
+      Height = 135
+      Align = alBottom
+      ScrollBars = ssVertical
+      TabOrder = 7
+    end
+    object ProgressBarSucesso: TProgressBar
+      Left = 0
+      Top = 321
+      Width = 319
+      Height = 17
+      TabOrder = 8
     end
   end
 end

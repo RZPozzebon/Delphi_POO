@@ -29,13 +29,20 @@ type
     lblEmailInvalido: TLabel;
     lblTipoCliente: TLabel;
     cbxTipoCliente: TComboBox;
+    Memo1: TMemo;
+    ProgressBarSucesso: TProgressBar;
+    lblSucesso: TLabel;
     procedure btnSalvarClienteClick(Sender: TObject);
     procedure rgSexoClienteClick(Sender: TObject);
   private
     Sexo: Char;
+    Clientes : Array[1..3] of TCliente;
+
     procedure habilitaMensagemErro(AMensagem : String);
     function PalavraExiste(const Mensagem, Palavra: string): Boolean;
     function strToTipoCliente(const str : String) : TTipoCliente;
+    procedure ThreadFinished(Sender: TObject);
+    procedure contaate100;
   public
     { Public declarations }
   end;
@@ -49,13 +56,20 @@ implementation
 
 procedure TfrmCadastroCliente.btnSalvarClienteClick(Sender: TObject);
 var
-  cliente : TClasseCliente;
+  cliente : TCliente;
   clienteController : TClienteController;
+  I : Integer;
+  //
+
 begin
-  cliente := TClasseCliente.Create();
+  cliente := TCliente.Create();
   clienteController := TClienteController.Create();
   try
     try
+      // Definição progressBar
+      ProgressBarSucesso.Max := 100;
+      ProgressBarSucesso.Min := 0;
+      ProgressBarSucesso.Position := 0;
 
       cliente.FNome := edtNomeCliente.Text;
       cliente.FContatoCliente := edtEmailCliente.Text;
@@ -63,8 +77,32 @@ begin
       cliente.FDataAniversario := dtpDataNascimento.Date;
       cliente.FTipoPessoa := ifthen(strToTipoCliente(cbxTipoCliente.Text) = TTipoCliente.Fisica, 'F','J');
 
-      // Chama minha camada CONTROLLER
-      clienteController.Salvar(Cliente);
+       //Popula Array
+       for I := 1 to Pred(Length(Clientes)) do
+       begin
+         Clientes[I] := Cliente;
+       end;
+
+       Memo1.Lines.Add(Format('Nome Cliente: %s  - Data de Aniversário: %s',[Clientes[1].FNome,DateToStr(Clientes[1].FDataAniversario)]));
+
+       // Chama minha camada CONTROLLER
+       TThread.CreateAnonymousThread(
+         procedure
+          var
+            I: Integer;
+         begin
+           contaate100;
+           //clienteController.Salvar(Cliente);
+           for I := 0 to 100 do
+           begin
+             TThread.Synchronize(nil,
+             procedure
+             begin
+               ProgressBarSucesso.Position := i;
+             end)
+           end;
+       end).Start;
+
     except
       on e : Exception do
       begin
@@ -75,6 +113,18 @@ begin
   finally
     FreeAndNil(cliente);
     FreeAndNil(clienteController);
+  end;
+end;
+
+procedure TfrmCadastroCliente.contaate100;
+var
+ I : Integer;
+ lbl : Integer;
+begin
+  for I := 0 to 100 do
+  begin
+     sleep(2000);
+     lbl := I;
   end;
 end;
 
@@ -125,10 +175,17 @@ begin
 end;
 function TfrmCadastroCliente.strToTipoCliente(const str: String): TTipoCliente;
 begin
+   result := Fisica;
    if str = 'Fisica' then
      result := Fisica;
    if str = 'Juridica' then
      result := Juridica;
+end;
+
+procedure TfrmCadastroCliente.ThreadFinished(Sender: TObject);
+begin
+  ProgressBarSucesso.Position := ProgressBarSucesso.Max; // Garante que o progresso está completo
+  lblSucesso.Visible := true;
 end;
 
 end.

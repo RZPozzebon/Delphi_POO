@@ -15,7 +15,7 @@ type
       FConexao : TFDConnection;
       FQuery   : TFDQuery;
     public
-      procedure salvar(cliente : TClasseCliente);
+      procedure salvar(cliente : TCliente);
       procedure consultarCliente;
 
       constructor Create;
@@ -74,7 +74,7 @@ begin
   end;
 end;
 
-procedure TDAOCliente.salvar(cliente: TClasseCliente);
+procedure TDAOCliente.salvar(cliente: TCliente);
 var
   WaitCursor: TFDGUIxWaitCursor;
 
